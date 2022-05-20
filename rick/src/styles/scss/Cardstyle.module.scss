@@ -10,7 +10,6 @@
 
 .cardlist {
     @include mixins.size(80%, auto);
-
 }
 
 .card {
@@ -19,12 +18,28 @@
 }
 
 .imgCard {
-    
-    @include mixins.size(100%, 400px);
-    // object-fit: cover;
+        @include mixins.size(100%, 400px);
     object-position: center;
 }
 
 .charactername {
     color: black;
+}
+.searchbar {
+    @include mixins.size(36%, 48px);
+    padding: 14px;
+}
+
+.characterspage {
+    @include mixins.size(100%, auto);
+}
+
+.inputparent {
+
+    width: 100%;
+    min-height: 10%;
+    display: flex;
+    justify-content: center;
+    outline: none;
+
 }
