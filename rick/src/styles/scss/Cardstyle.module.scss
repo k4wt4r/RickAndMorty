@@ -1,0 +1,30 @@
+@use '../../mixins.scss';
+
+.charactersList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    @include mixins.size(100%, 100%);
+    padding-left: 8%;
+    gap: 24px;
+}
+
+.cardlist {
+    @include mixins.size(100%, auto);
+
+}
+
+.card {
+    @include mixins.size(100%, auto);
+    @include mixins.card(1px, 10px, (0 0.5rem 1rem rgba(black, 0.15)), gray, 5px, 7px);
+}
+
+.imgCard {
+    border-radius: 5%;
+    @include mixins.size(100%, 400px);
+    // object-fit: cover;
+    object-position: center;
+}
+
+.charactername {
+    color: black;
+}

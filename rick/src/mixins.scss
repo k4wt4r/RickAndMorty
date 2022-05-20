@@ -1,0 +1,20 @@
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin position($display, $direction, $justify, $align) {
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin card($border, $boder-raduis, $box-shadow, $color, $padding, $margin) {
+    border: $border;
+    border-radius: $boder-raduis;
+    box-shadow: $box-shadow;
+    color: $color;
+    padding: $padding;
+    margin: $margin;
+}

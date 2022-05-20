@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Card from "./SingleCard";
+import Card from "./Card/Card";
+import Cardstyle from "../styles/scss/Cardstyle.module.scss";
 
 function Characters() {
   const [data, setData] = useState([]);
@@ -12,12 +13,13 @@ function Characters() {
     })();
   }, []);
   return (
-    <div>
+    <div className={Cardstyle.charactersList}>
       {data.map((character, index) => (
         <Card character={character} key={index} />
       ))}
     </div>
   );
+  // <pre>{JSON.stringify(data, null, 2)}</pre>;
 }
 
 export default Characters;

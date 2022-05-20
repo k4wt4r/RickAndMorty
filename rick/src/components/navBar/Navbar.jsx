@@ -1,5 +1,6 @@
 import React from "react";
 import NavbarElements from "./NavbarElements";
+import NavBar from "../../styles/scss/NavBar.module.scss";
 
 const navElements = [
   { link: "/location", text: "Location" },
@@ -10,14 +11,13 @@ const navElements = [
 function Navbar() {
   const [activElement, setActivElement] = React.useState(0);
   return (
-    <nav>
-      <div>
+    <nav className={NavBar.navbar}>
+      <div className={NavBar.logo}>
         <a href="/" className="nav-logo">
-          {" "}
           LoGo
         </a>
       </div>
-      <div>
+      <div className={NavBar.menu}>
         {navElements.map(({ link, text }, index) => (
           <NavbarElements
             link={link}

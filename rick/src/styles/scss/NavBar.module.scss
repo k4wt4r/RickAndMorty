@@ -1,0 +1,22 @@
+@use '../../mixins.scss';
+
+.navbar {
+    background-color: rgb(168, 166, 170);
+    @include mixins.size(100%, 80px);
+    @include mixins.position(flex, row, space-between, center);
+    padding: 6px;
+
+}
+
+.logo {
+    padding: 6px;
+}
+
+.menu {
+    padding: 8px;
+}
+
+.navbarElements {
+    padding: 8px;
+    color: rgb(239, 232, 232);
+}
