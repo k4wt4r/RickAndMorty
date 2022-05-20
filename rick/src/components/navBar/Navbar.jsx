@@ -1,6 +1,7 @@
 import React from "react";
 import NavbarElements from "./NavbarElements";
 import NavBar from "../../styles/scss/NavBar.module.scss";
+import logo from "./img/logo.png";
 
 const navElements = [
   { link: "/location", text: "Location" },
@@ -14,7 +15,7 @@ function Navbar() {
     <nav className={NavBar.navbar}>
       <div className={NavBar.logo}>
         <a href="/" className="nav-logo">
-          LoGo
+          <img className={NavBar.logoimg} src={logo} alt="rick and morty" />
         </a>
       </div>
       <div className={NavBar.menu}>
