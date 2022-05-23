@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Card from "./Card/Card";
 import Cardstyle from "../styles/scss/Cardstyle.module.scss";
 
-function Characters({ character }) {
+function Characters() {
   const [data, setData] = useState([]);
   const [search, setSearch] = useState("");
 
@@ -15,11 +15,14 @@ function Characters({ character }) {
   }, []);
   return (
     <div className={Cardstyle.characterspage}>
-      <input
-        type="search"
-        placeholder="Search"
-        onChange={(e) => setSearch(e.target.value)}
-      />
+      <div className={Cardstyle.container}>
+        <input
+          type="search"
+          className={Cardstyle.searchbar}
+          placeholder="Search"
+          onChange={(e) => setSearch(e.target.value)}
+        />
+      </div>
       <div className={Cardstyle.charactersList}>
         {data
           .filter((character) => {

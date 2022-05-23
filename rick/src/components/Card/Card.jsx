@@ -9,7 +9,11 @@ function Card({ character }) {
         src={character.image}
         alt={character.name}
       />
-      <div className={Cardstyle.charactername}>{character.name}</div>
+      <div className={Cardstyle.charactername}>
+        <div className={Cardstyle.namesofcharacters}>{character.name}</div>
+        <div className={Cardstyle.speciesofcharacters}>{character.species}</div>
+        <div className={Cardstyle.genderofcharacters}>{character.gender}</div>
+      </div>
     </div>
   );
 }

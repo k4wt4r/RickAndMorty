@@ -15,6 +15,7 @@
 .card {
     @include mixins.size(100%, auto);
     @include mixins.card(1px, 1px, (0 0.5rem 1rem rgba(black, 0.15)), gray, 5px, 7px);
+
 }
 
 .imgCard {
@@ -22,9 +23,6 @@
     object-position: center;
 }
 
-.charactername {
-    color: black;
-}
 .searchbar {
     @include mixins.size(36%, 48px);
     padding: 14px;
@@ -34,12 +32,18 @@
     @include mixins.size(100%, auto);
 }
 
-.inputparent {
+.container {
 
     width: 100%;
     min-height: 10%;
     display: flex;
     justify-content: center;
-    outline: none;
+}
 
+.proprietes {
+    display: flex;
+
+}
+
+.namesofcharacters {
 }
