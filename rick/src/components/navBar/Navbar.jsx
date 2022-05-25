@@ -13,6 +13,8 @@ function Navbar() {
   const [activElement, setActivElement] = React.useState(0);
   return (
     <nav className={NavBar.navbar}>
+      <div className={NavBar.navbarLogoAndMenu}>
+
       <div className={NavBar.logo}>
         <a href="/" className="nav-logo">
           <img className={NavBar.logoimg} src={logo} alt="rick and morty" />
@@ -28,6 +30,7 @@ function Navbar() {
             index={index}
           />
         ))}
+      </div>
       </div>
     </nav>
   );

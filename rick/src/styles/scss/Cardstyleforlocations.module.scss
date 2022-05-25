@@ -1,0 +1,44 @@
+@use '../../mixins.scss';
+
+.locations {
+    @include mixins.size(100%, 100vh);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 24px;
+    padding: 12px;
+
+}
+
+.locationCards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    @include mixins.size(100%, 40%);
+    padding: 6%;
+    gap: 24px;
+    border: 2px;
+    background-color: antiquewhite;
+}
+
+.singlecardlocation {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(107, 96, 96, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.9px);
+    -webkit-backdrop-filter: blur(11.9px);
+    border: 0.2px solid rgba(107, 96, 96, 0.23);
+
+
+}
+
+.namesOfLocations {
+    color: rgb(18, 20, 20);
+    font-weight: bold;
+}
+
+.nameLabel {
+    font-weight: 400;
+}

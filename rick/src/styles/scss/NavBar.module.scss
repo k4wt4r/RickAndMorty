@@ -3,16 +3,17 @@
 .navbar {
     background-color: rgb(246, 244, 247);
     @include mixins.size(100%, 80px);
-    @include mixins.position(flex, row, space-between, center);
+    display: flex;
+        flex-direction: row;
     padding: 10px;
 }
 
 .logo {
-    padding-left: 40px;
+    padding-left: 60px;
 }
 
 .logoimg {
-    @include mixins.size(70px, 70px);
+    @include mixins.size(50px, 50px);
 }
 .menu {
     padding: 8px;
@@ -23,4 +24,8 @@
         color: rgb(39, 125, 73);
         font-size: medium;
         font-weight: bold;
+}
+.navbarLogoAndMenu {
+    @include mixins.position(flex, row, space-between, center);
+    @include mixins.size(90%, 80px);
 }
