@@ -1,4 +1,5 @@
 import React from 'react';
+import Characterspage from "../../styles/scss/Characterspage.module.scss"
 
 const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
     const pageNumbers = [];
@@ -9,10 +10,10 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
 
     return (
         <nav>
-            <ul className='pagination'>
+            <ul className={Characterspage.paginationNumbers}>
                 {pageNumbers.map(number => (
-                    <li key={number} className='page-item'>
-                        <a onClick={() => paginate(number)} href='!#' className='page-link'>
+                    <li key={number} className={Characterspage.paginationList}>
+                        <a onClick={() => paginate(number)} href='!#' className={Characterspage.numberOfPages} >
                             {number}
                         </a>
                     </li>
