@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import Pagination from './Pagination/Pagination';
 import CardCharacter from './Card/CardCharacter/CardCharacter';
-import Characterspage from '../styles/scss/Characterspage.module.scss'
+import Characterspage from '../styles/scss/Characterspage.module.scss';
+import NavBar from "./NavBar/Navbar"
 
 function Characters() {
     const [card, setCard] = useState([]);
@@ -30,18 +31,30 @@ function Characters() {
 
 
     return (
+        <>
+            <NavBar />
         <div className={Characterspage.characters}>
+                <div className={Characterspage.titleContainer}>
+
             <h1 className={Characterspage.characterstitle}>Characters</h1>
-            <div className={Characterspage.searchbar}>
+                </div>
+                <div className={Characterspage.searchBar}>
                 <input
                     type="search"
-                    className={Characters.inputcharacter}
+                        className={Characterspage.inputCharacter}
                     placeholder="Search"
                     onChange={(e) => setSearch(e.target.value)}
                 />
             </div>
-            <div className={Characterspage.pagination}>
+                <div className={Characterspage.cardsOfCharacters}>
                 <CardCharacter characters={currentCards} loading={loading} />
+
+                </div>
+
+
+            </div>
+            <div className={Characterspage.container}>
+
                 <Pagination
                     cards={card}
                     postsPerPage={cardsPerPage}
@@ -49,8 +62,7 @@ function Characters() {
                     paginate={paginate}
                 />
             </div>
-
-        </div>
+        </>
     )
 }
 
