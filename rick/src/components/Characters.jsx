@@ -36,13 +36,13 @@ function Characters() {
         <div className={Characterspage.characters}>
                 <div className={Characterspage.titleContainer}>
 
-            <h1 className={Characterspage.characterstitle}>Characters</h1>
+                    <h1 className={Characterspage.characterstitle}>Find your favorites rick and morty characters</h1>
                 </div>
                 <div className={Characterspage.searchBar}>
                 <input
                         type="text"
                         className={Characterspage.inputCharacter}
-                        placeholder="Find your favorites rick and morty characters"
+                        placeholder="Search"
                     onChange={(e) => setSearch(e.target.value)}
                 />
             </div>
