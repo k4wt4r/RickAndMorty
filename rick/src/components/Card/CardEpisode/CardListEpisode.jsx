@@ -1,13 +1,15 @@
 import React from 'react'
-import CardEpisode from './CardEpisode'
+import Episodespage from '../../../styles/scss/Episodespage.module.scss'
 
-
-function CardListEpisode({ episodes }) {
+function CardListEpisode({ episodes, loading }) {
+    if (loading)
+        return (<h3>Loading ...</h3>)
     return (
-        <div>
+        <div className={Episodespage.cardsOfEpisodes}>
             {episodes.map((episode, index) => (
-                <div key={index}>
-                    <CardEpisode episode={episode} />
+                <div key={index} className={Episodespage.episode}>
+                    <span>Name: </span>
+                    {episode.name}
                 </div>))}
         </div>
     )

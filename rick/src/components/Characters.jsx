@@ -40,15 +40,14 @@ function Characters() {
                 </div>
                 <div className={Characterspage.searchBar}>
                 <input
-                    type="search"
+                        type="text"
                         className={Characterspage.inputCharacter}
-                    placeholder="Search"
+                        placeholder="Find your favorites rick and morty characters"
                     onChange={(e) => setSearch(e.target.value)}
                 />
             </div>
                 <div className={Characterspage.cardsOfCharacters}>
-                <CardCharacter characters={currentCards} loading={loading} />
-
+                    <CardCharacter characters={currentCards} loading={loading} />
                 </div>
 
 

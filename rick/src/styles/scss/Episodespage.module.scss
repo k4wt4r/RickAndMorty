@@ -1,0 +1,58 @@
+@use '../../mixins.scss';
+
+.episodes {
+    background-color: peachpuff;
+    @include mixins.size(100%, 100vh);
+
+}
+
+.pageTitleEpisode {
+    @include mixins.size(100%, 40px);
+
+    display: flex;
+
+}
+
+.episodeTitle {
+    @include mixins.size(100%, auto);
+    font-size: 40px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    margin: 3%;
+}
+
+.cardsOfEpisodes {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    padding: 6%;
+
+    @include mixins.size(100%, auto);
+}
+
+.search {
+    @include mixins.size(100%, auto);
+    display: flex;
+    justify-content: center;
+    margin: 6%;
+}
+
+.inputEpisode {
+    @include mixins.size(40%, 50px);
+    padding: 12px;
+}
+
+.episode {
+    @include mixins.size(80%, 60px);
+    background: rgba(73, 58, 58, 0.52);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.1px);
+    -webkit-backdrop-filter: blur(9.1px);
+    border: 1px solid rgba(73, 58, 58, 0.32);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

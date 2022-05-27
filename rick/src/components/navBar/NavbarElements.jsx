@@ -1,9 +1,11 @@
 import React from "react";
-import NavBar from "../../styles/scss/NavBar.module.scss";
+
 
 function NavbarElements({ link, text, active, setActive, index }) {
   return (
-    <a href={link} className={NavBar.navbarElements}>
+    <a href={link} className={`block mt-4 lg:inline-block lg:mt-0 mr-4 cursor-pointer ${active ? "text-green-700" : "text-white"}`}
+      onClick={() => setActive(index)}
+    >
       {text}
     </a>
   );

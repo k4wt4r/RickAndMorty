@@ -1,0 +1,68 @@
+@use '../../mixins.scss';
+
+.locations {
+    @include mixins.size(100%, 100vh);
+
+}
+
+.locationCards {
+    @include mixins.size(100%, auto);
+    padding: 4%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    background-color: cadetblue;
+    border: 2px solid black;
+
+    padding: 40px;
+
+}
+
+.locationCard {
+
+    @include mixins.size(auto, auto);
+    background: rgba(104, 89, 89, 0.17);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.1px);
+    -webkit-backdrop-filter: blur(9.1px);
+    border: 1px solid rgba(104, 89, 89, 0.32);
+
+
+}
+
+.containerLocation {
+    @include mixins.size(100%, auto);
+    display: flex;
+    justify-content: center;
+
+}
+
+.locationTitle {
+    @include mixins.size(100%, auto);
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+    font-weight: 500;
+    font-size: x-large;
+}
+
+.locationSearch {
+    @include mixins.size(100%, auto);
+    display: flex;
+    justify-content: center;
+
+}
+
+.inputSearch {
+
+    @include mixins.size(40%, 50px);
+    padding: 12px;
+}
+
+.container {
+    background-color: coral;
+    @include mixins.size(100%, 100%);
+    display: flex;
+    justify-content: center;
+}

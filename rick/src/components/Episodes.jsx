@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import CardListEpisode from './Card/CardEpisode/CardListEpisode';
 import Navbar from './NavBar/Navbar';
 import Pagination from './Pagination/Pagination';
+import Episodespage from "../styles/scss/Episodespage.module.scss"
 
 
 function Episodes() {
@@ -32,18 +33,19 @@ function Episodes() {
     return (
         <>
             <Navbar />
-            <div>
-                <div>
-                    <h1>Episodes</h1>
+            <div className={Episodespage.episodes}>
+                <div className={Episodespage.pageTitleEpisode}>
+                    <h1 className={Episodespage.episodeTitle}>Episodes</h1>
                 </div>
-                <div>
+                <div className={Episodespage.search}>
                     <input
+                        className={Episodespage.inputEpisode}
                         type="search"
                         placeholder="Search"
                         onChange={(event) => setSearch(event.target.value)}
                     />
                 </div>
-                <div>
+                <div className={Episodespage.episodesCard}>
                     <CardListEpisode episodes={currentCards} loading={loading} />
                 </div>
             </div>

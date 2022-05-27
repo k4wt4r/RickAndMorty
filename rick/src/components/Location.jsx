@@ -46,7 +46,6 @@ function Location() {
         </div>
         <div className={Locationspage.locationCards}>
           <div className={Locationspage.container}>
-
             <CardListLocation locations={currentCards} loading={loading} />
           </div>
         </div>
