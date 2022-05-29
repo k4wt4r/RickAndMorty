@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import NavbarElements from "./NavbarElements";
 import NavBar from "../../styles/scss/NavBar.module.scss";
 import logo from "./img/logo.png";
 import { MdOutlineDarkMode } from "react-icons/md";
+import { RiSearch2Line } from "react-icons/ri";
 
 const navElements = [
   { link: "/", text: "Characters" },
@@ -11,7 +12,8 @@ const navElements = [
 ];
 
 function Navbar() {
-  const [activElement, setActivElement] = React.useState(0);
+  const [activElement, setActivElement] = useState(0);
+  //const [isOpen, setIsOpen] = useState(false);
   return (
     <nav className={NavBar.navbar}>
       <div className={NavBar.navbarLogoAndMenu}>
@@ -32,8 +34,12 @@ function Navbar() {
             />
           ))}
         </div>
-        <MdOutlineDarkMode className={NavBar.darkModeIcon} />
-        <div>
+
+        <div className={NavBar.searchAndDarkModeIcons}>
+
+          <RiSearch2Line className={NavBar.searchIcon} />
+
+          <MdOutlineDarkMode className={NavBar.darkModeIcon} />
 
         </div>
       </div>
